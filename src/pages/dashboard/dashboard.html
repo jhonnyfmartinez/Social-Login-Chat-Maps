@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Escoge un servicio!</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="page-dashboard">
+  <ion-grid style="height: 100%;padding: 0px;">
+    <ion-row style="height: 100%;">
+      <ion-col (click)="OnChat()" class="leftSide">
+        <div class="divHeaderLeft">
+          <h2>Chat  <ion-icon name="chatboxes"></ion-icon></h2>
+        </div>
+        <img src="assets/img/chat.png">
+      </ion-col>
+      <ion-col (click)="OnMaps()" class="rightSide">
+        <div class="divHeaderRight">
+          <h2>Mapas  <ion-icon name="pin"></ion-icon></h2>
+        </div>
+        <img src="assets/img/maps.png">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

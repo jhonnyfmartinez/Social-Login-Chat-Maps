@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Reto 2
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="auth-home" padding>
+
+  <h2 text-center class="titulo">¡Bienvenido!</h2>
+
+  <div style="height: 100px;"></div>
+
+  <button ion-button block color="facebook" (click)="loginUserWithFacebook()">
+    <ion-icon name="logo-facebook" start></ion-icon>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    Ingresar con Facebook
+  </button>
+  <div style="height: 10px;"></div>
+  <button ion-button block color="google" (click)="loginUserWithGoogle()">
+    <ion-icon name="logo-googleplus" start></ion-icon>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    Ingresar con Google
+  </button>
+
+  <div padding class="error" *ngIf="error">
+    <p>{{error}}</p>
+  </div>
+
+</ion-content>

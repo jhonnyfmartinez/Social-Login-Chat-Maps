@@ -1,0 +1,35 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-title>Chat</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="home">
+
+	<ion-list *ngFor="let message of chats">
+		<ion-item>
+			<ion-avatar item-left>
+				<img src="{{message.img}}">
+			</ion-avatar>
+			<p>{{message.body}}</p>
+      <p item-right>{{message.user}}</p>
+		</ion-item>
+	</ion-list>
+
+	<ion-footer>
+		<ion-grid>
+			<ion-row>
+				<ion-col width-80>
+					<ion-input type="text" [(ngModel)]="chatinp" placeholder="Ingresa tu mensaje"></ion-input>
+
+				</ion-col>
+				<ion-col width-20>
+					<button clear ion-button color="dark" (click)="send()">
+                    <ion-icon name="send"></ion-icon>
+                    </button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-footer>
+</ion-content>

@@ -1,0 +1,35 @@
+.auth-home {
+
+  .error {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(217, 74, 87);
+    p {
+      color: white;
+      font-weight: bold;
+    }
+  }
+
+  .titulo{
+    margin-top: 5em;
+  }
+
+  .fbButton{
+    margin-left: 7em;
+  }
+
+  .googleButton{
+    margin-left: 15em;
+  }
+
+  .terms-of-use-txt {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    font-size: 10px;
+    color: white;
+  }
+}

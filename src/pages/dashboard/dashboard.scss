@@ -1,0 +1,39 @@
+.page-dashboard {
+
+  .divHeaderLeft{
+    color: #ffffff;
+    margin-left:20%;
+    position: absolute;
+    top: 20%;
+  }
+
+  .divHeaderRight{
+    color: #000000;
+    margin-left:20%;
+    position: absolute;
+    top: 60%;
+  }
+
+  .leftSide{
+    height: 100%;
+    padding: 0px;
+    position: relative;
+    img{
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+    }
+
+  }
+  .rightSide{
+    height: 100%;
+    padding: 0px;
+    position: relative;
+    img{
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}
+
