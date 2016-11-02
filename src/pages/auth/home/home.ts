@@ -28,7 +28,7 @@ export class AuthPage {
 
   loginUserWithGoogle() {
     this.auth.loginWithCustomGoogle().subscribe(data => {
-      this.navCtrl.setRoot(Dashboard,{name:data.displayName,img:data.imageUrl});
+      this.navCtrl.setRoot(Dashboard,{name:data.name,img:data.image});
     }, err => {
       this.error = err;
     });

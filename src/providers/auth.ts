@@ -36,9 +36,26 @@ export class AuthProvider {
 
   loginWithCustomGoogle() {
     return Observable.create(observer => {
-      GooglePlus.login({}).then( successData => {
-        console.log(successData);
-        observer.next(successData);
+      GooglePlus.login({
+        'scopes': 'profile email',
+        'webClientId': '865828464204-eeurqqn6q8crvbq7stb5mktr7vq65cpn.apps.googleusercontent.com'
+      }).then( successData => {
+        let provider  = firebase.auth.GoogleAuthProvider.credential(successData.idToken);
+        firebase.auth().signInWithCredential(provider).then(firebaseData => {
+          this.af.database.list('users').update(firebaseData.uid, {
+            name: firebaseData.displayName,
+            email: firebaseData.email,
+            provider: 'google',
+            image: firebaseData.photoURL
+          });
+          var userInfo = {
+            name: firebaseData.displayName,
+            email: firebaseData.email,
+            provider: 'google',
+            image: firebaseData.photoURL
+          }
+          observer.next(userInfo);
+        });
       }).catch( error => {
         observer.error(error);
       });

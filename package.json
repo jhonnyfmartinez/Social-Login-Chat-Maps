@@ -1,7 +1,7 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "Reto2",
+  "author": "Jhonny Martinez",
+  "homepage": "http://github.com/jhonny9550",
   "private": true,
   "scripts": {
     "build": "ionic-app-scripts build",

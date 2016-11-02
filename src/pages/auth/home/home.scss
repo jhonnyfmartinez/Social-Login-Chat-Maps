@@ -1,5 +1,21 @@
 .auth-home {
 
+  background-image: url("../assets/img/rain.png");
+
+  .footer{
+    color: #fff;
+    font-size:1.2em;
+  }
+
+  button{
+
+    ion-icon{
+
+      font-size: 2em;
+    }
+    height:5rem;
+  }
+
   .error {
     margin-top: 20px;
     width: 100%;
@@ -12,7 +28,8 @@
   }
 
   .titulo{
-    margin-top: 5em;
+    color: #fff;
+    font-size: 3em;
   }
 
   .fbButton{

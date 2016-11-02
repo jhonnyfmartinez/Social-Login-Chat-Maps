@@ -2,6 +2,11 @@
 
   <ion-navbar color="primary">
     <ion-title>Escoge un servicio!</ion-title>
+    <ion-buttons end>
+      <button ion-button color="light" (click)="logOut()" style="font-size: 2em;">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -18,7 +23,7 @@
       </ion-col>
       <ion-col (click)="OnMaps()" class="rightSide">
         <div class="divHeaderRight">
-          <h2>Mapas  <ion-icon name="pin"></ion-icon></h2>
+          <h2>Mapa  <ion-icon name="pin"></ion-icon></h2>
         </div>
         <img src="assets/img/maps.png">
       </ion-col>

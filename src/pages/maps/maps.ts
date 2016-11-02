@@ -1,7 +1,8 @@
 import { Component,ViewChild, ElementRef } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,ToastController  } from 'ionic-angular';
 import {Geolocation} from 'ionic-native';
 import {map} from "rxjs/operator/map";
+
 
 declare var google;
 
@@ -19,7 +20,7 @@ export class Maps {
 
   directionsService:any = new google.maps.DirectionsService();
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,public toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
@@ -35,11 +36,14 @@ export class Maps {
       };
       this.directionsService.route(request,function(result,status){
         if (status == google.maps.DirectionsStatus.OK) {
-          console.log("intentando trasar ruta");
           directionsDisplay.setDirections(result);
         }
-
       });
+      let toast = this.toastCtrl.create({
+        message: '¡Disfruta tu viaje!',
+        duration: 3000
+      });
+      toast.present();
   }
 
   loadMap(){
